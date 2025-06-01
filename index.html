@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Rail Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-train"></i>
+                <h1>Metro Rail Tickets</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active" data-tab="journey">Plan Journey</a>
+                <a href="#" data-tab="stations">Stations</a>
+                <a href="#" data-tab="fares">Fares</a>
+                <a href="#" data-tab="schedule">Schedule</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Journey Planner Section -->
+        <section id="journey" class="tab-content active">
+            <div class="journey-planner">
+                <h2>Plan Your Journey</h2>
+                <div class="journey-form">
+                    <div class="input-group">
+                        <label for="from-station">From</label>
+                        <select id="from-station" required>
+                            <option value="">Select Station</option>
+                        </select>
+                    </div>
+                    <div class="swap-stations">
+                        <button id="swap-btn"><i class="fas fa-exchange-alt"></i></button>
+                    </div>
+                    <div class="input-group">
+                        <label for="to-station">To</label>
+                        <select id="to-station" required>
+                            <option value="">Select Station</option>
+                        </select>
+                    </div>
+                    <button id="plan-journey" class="primary-btn">Find Route</button>
+                </div>
+                <div id="journey-results" class="journey-results">
+                    <!-- Results will be displayed here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Stations Section -->
+        <section id="stations" class="tab-content">
+            <div class="stations-container">
+                <h2>Metro Stations</h2>
+                <div class="search-box">
+                    <input type="text" id="station-search" placeholder="Search stations...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="stations-grid" id="stations-grid">
+                    <!-- Stations will be populated here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Fares Section -->
+        <section id="fares" class="tab-content">
+            <div class="fare-calculator">
+                <h2>Fare Calculator</h2>
+                <div class="fare-form">
+                    <div class="input-group">
+                        <label for="fare-from">From Station</label>
+                        <select id="fare-from" required>
+                            <option value="">Select Station</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="fare-to">To Station</label>
+                        <select id="fare-to" required>
+                            <option value="">Select Station</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="ticket-type">Ticket Type</label>
+                        <select id="ticket-type" required>
+                            <option value="single">Single Journey</option>
+                            <option value="return">Return Journey</option>
+                            <option value="day-pass">Day Pass</option>
+                        </select>
+                    </div>
+                    <button id="calculate-fare" class="primary-btn">Calculate Fare</button>
+                </div>
+                <div id="fare-result" class="fare-result">
+                    <!-- Fare results will be displayed here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="tab-content">
+            <div class="schedule-container">
+                <h2>Train Schedule</h2>
+                <div class="schedule-form">
+                    <div class="input-group">
+                        <label for="schedule-station">Select Station</label>
+                        <select id="schedule-station" required>
+                            <option value="">Select Station</option>
+                        </select>
+                    </div>
+                    <button id="view-schedule" class="primary-btn">View Schedule</button>
+                </div>
+                <div class="schedule-table">
+                    <table id="train-schedule">
+                        <thead>
+                            <tr>
+                                <th>Train No.</th>
+                                <th>Destination</th>
+                                <th>Expected Time</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="schedule-body">
+                            <!-- Schedule data will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="emergency-contact">
+                <h3>Emergency Contact</h3>
+                <p><i class="fas fa-phone"></i> Helpline: 1800-123-4567</p>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <a href="info.html#safety">Safety Guidelines</a>
+                <a href="info.html#lost">Lost & Found</a>
+                <a href="info.html#smart-card">Smart Cards</a>
+                <a href="info.html#rules">Metro Rules</a>
+                <a href="info.html#hours">Operating Hours</a>
+                <a href="info.html#fares">Fare Chart</a>
+            </div>
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Metro Rail Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
